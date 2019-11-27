@@ -24,11 +24,18 @@
     $ sudo apt-get install fdupes
     ```
 - 数据处理
-  - 每个类别对应一个pcap包，存放在0_pcap文件夹中
-  - 拆包，将pcap进行session层面的拆分
+  - 每个类别对应一个pcap文件，存放在1_pcap文件夹中
+  - 拆包，将pcap文件进行session层面的拆分
     ```
-    pwsh 1_Pcap2Session.ps1 -s
+    $ pwsh 1_Pcap2Session.ps1 -s
     如果是按照flow层面进行拆分
     $ pwsh 1_Pcap2Session.ps1 -f
+    ```
+    如果成功运行，则可以看到2_Session文件夹中含有AllLayers/和L7/这两个文件夹
+  - 对pcap包进行预处理，主要是进行下采样以及进行padding操作，统一到784个字节
+    ```
+    $ pwsh 2_ProcessSession.ps1 -a [-u | -s]
+    其中-u表示随机进行下采样，而-s表示对pcap包进行按size从大到小后再进行下采样，采样60000个包  
+    如何执行成功则在3_ProcessedSession文件夹中包含两个文件夹，FilteredSession/和TrimedSession/分别对应下采样和padding操作后的文件夹
     ```
   
