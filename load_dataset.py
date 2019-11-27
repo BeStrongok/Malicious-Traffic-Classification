@@ -11,18 +11,17 @@ def load_csv(root, filename, name2label):
         # 如果csv文件不存在，则创建
         images = []
         for name in name2label.keys(): # 遍历所有子目录，获得所有的图片
-            # 只考虑后缀为png,jpg,jpeg的图片：'pokemon\\mewtwo\\00001.png
+            # 只考虑后缀为png,jpg,jpeg的图片
             images += glob.glob(os.path.join(root, name, '*.png'))
-        # 打印数据集信息：1167, 'pokemon\\bulbasaur\\00000000.png'
+        # 打印数据集信息
         print(len(images))
         random.shuffle(images) # 随机打散顺序
         # 创建csv文件，并存储图片路径及其label信息
         with open(os.path.join(root, filename), mode='w', newline='') as f:
             writer = csv.writer(f)
-            for img in tqdm(images):  # 'pokemon\\bulbasaur\\00000000.png'
+            for img in tqdm(images):  
                 name = img.split(os.sep)[-2]
                 label = name2label[name]
-                # 'pokemon\\bulbasaur\\00000000.png', 0
                 writer.writerow([img, label])
 
     # 此时已经有csv文件，直接读取
@@ -30,7 +29,7 @@ def load_csv(root, filename, name2label):
     with open(os.path.join(root, filename)) as f:
         reader = csv.reader(f)
         for row in reader:
-            # 'pokemon\\bulbasaur\\00000000.png', 0
+
             img, label = row
             label = int(label)
             images.append(img)
@@ -41,7 +40,7 @@ def load_csv(root, filename, name2label):
 
 def load_data(root, mode='train'):
     # 创建数字编码表
-    name2label = {}  # "sq...":0
+    name2label = {}
     # 遍历根目录下的子文件夹，并排序，保证映射关系固定
     for name in sorted(os.listdir(os.path.join(root))):
         # 跳过非文件夹
