@@ -50,6 +50,6 @@
     代码保存在train.ipynb中，使用**tensorflow2.0**进行模型的构建与训练
 - **模型结果**  
   ![screenShot.png](https://i.loli.net/2019/11/27/bJuh1B2NQWpw58q.png)
-- **引用说明**
-  本项目中数据处理部分的代码来自于[yungshenglu/USTC-TK2016](https://github.com/yungshenglu/USTC-TK2016/tree/ubuntu)，以及[echowei/DeepTraffic](https://github.com/echowei/DeepTraffic)，特地表示感谢。
+- **引用说明**  
+  本项目中数据处理部分的代码来自于[yungshenglu/USTC-TK2016](https://github.com/yungshenglu/USTC-TK2016/tree/ubuntu)，以及[echowei/DeepTraffic](https://github.com/echowei/DeepTraffic)两个项目，特地表示感谢。
   
