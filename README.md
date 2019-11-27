@@ -5,7 +5,7 @@
 - **算法**：卷积神经网络，2个卷积层以及2个全连接层
 ## 具体流程
 - 环境准备
-  - Mono
+  - Mono  
   '''
   $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
   $ sudo apt install apt-transport-https ca-certificates
