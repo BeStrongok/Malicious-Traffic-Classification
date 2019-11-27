@@ -26,7 +26,7 @@
 - **数据处理**
   - 每个类别对应一个pcap文件，存放在1_pcap文件夹中
     ```
-    数据集可以在[echowei/DeepTraffic](https://github.com/echowei/DeepTraffic/tree/master/1.malware_traffic_classification/1.DataSet(USTC-TFC2016)/Malware)里下载
+    数据集可以在https://github.com/echowei/DeepTraffic/tree/master/1.malware_traffic_classification/1.DataSet(USTC-TFC2016)/Malware 里下载
     ```
   - 拆包，将pcap文件进行session层面的拆分
     ```
