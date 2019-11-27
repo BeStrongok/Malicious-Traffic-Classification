@@ -48,6 +48,8 @@
     代码保存在load_dataset.py中，作为模块提供给训练脚本进行导入
   - 模型训练  
     代码保存在train.ipynb中，使用**tensorflow2.0**进行模型的构建与训练
-- **模型结果**
+- **模型结果**  
   ![screenShot.png](https://i.loli.net/2019/11/27/bJuh1B2NQWpw58q.png)
+- **引用说明**
+  本项目中数据处理部分的代码来自于[yungshenglu/USTC-TK2016](https://github.com/yungshenglu/USTC-TK2016/tree/ubuntu)，以及[echowei/DeepTraffic](https://github.com/echowei/DeepTraffic)，特地表示感谢。
   
