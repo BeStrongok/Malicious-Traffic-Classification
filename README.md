@@ -52,5 +52,5 @@
   - 模型在训练集上的准确率为0.9901，验证集上的准确率为0.9864，测试集上的准确率为0.9872
   ![screenShot.png](https://i.loli.net/2019/11/27/bJuh1B2NQWpw58q.png)
 - **引用说明**  
-  本项目中数据处理部分的代码来自于[yungshenglu/USTC-TK2016](https://github.com/yungshenglu/USTC-TK2016/tree/ubuntu)，以及[echowei/DeepTraffic](https://github.com/echowei/DeepTraffic)两个项目，特地表示感谢。
+  本项目中数据处理部分的代码参考了[yungshenglu/USTC-TK2016](https://github.com/yungshenglu/USTC-TK2016/tree/ubuntu)，以及[echowei/DeepTraffic](https://github.com/echowei/DeepTraffic)两个项目，特地表示感谢。
   
