@@ -33,7 +33,7 @@
     $ pwsh 1_Pcap2Session.ps1 -s
     如果是按照flow层面进行拆分
     $ pwsh 1_Pcap2Session.ps1 -f
-    如果成功运行，则可以看到2_Session文件夹中含有AllLayers/和L7/这两个文件夹
+    如果成功运行，则可以看到2_Session/文件夹中含有AllLayers/和L7/这两个文件夹
     ```
   - 对pcap包进行预处理，主要是进行下采样以及进行padding操作，统一到784个字节
     ```
