@@ -30,8 +30,8 @@
     $ pwsh 1_Pcap2Session.ps1 -s
     如果是按照flow层面进行拆分
     $ pwsh 1_Pcap2Session.ps1 -f
-    ```
     如果成功运行，则可以看到2_Session文件夹中含有AllLayers/和L7/这两个文件夹
+    ```
   - 对pcap包进行预处理，主要是进行下采样以及进行padding操作，统一到784个字节
     ```
     $ pwsh 2_ProcessSession.ps1 -a [-u | -s]
@@ -43,4 +43,11 @@
     python3 3_Session2png.py
     得到的结果保存在4_Png/文件夹中，每个样本一个文件夹
     ```  
-    **至此数据预处理部分就完成。**
+- **模型训练**
+  - 加载数据
+    代码保存在load_dataset.py中，作为模块提供给训练脚本进行导入
+  - 模型训练
+    代码保存在train.ipynb中，使用**tensorflow2.0**进行模型的构建与训练
+- **模型结果**
+  - 
+  
