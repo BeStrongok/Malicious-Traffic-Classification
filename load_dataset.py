@@ -114,8 +114,7 @@ def main():
     # 创建TensorBoard对象
     writter = tf.summary.create_file_writer('logs')
     for step, (x,y) in enumerate(db):
-        # x: [32, 224, 224, 3]
-        # y: [32]
+        
         with writter.as_default():
 #             x = denormalize(x) # 反向normalize，方便可视化
             # 写入图片数据
