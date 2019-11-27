@@ -44,10 +44,10 @@
     得到的结果保存在4_Png/文件夹中，每个样本一个文件夹
     ```  
 - **模型训练**
-  - 加载数据
+  - 加载数据  
     代码保存在load_dataset.py中，作为模块提供给训练脚本进行导入
-  - 模型训练
+  - 模型训练  
     代码保存在train.ipynb中，使用**tensorflow2.0**进行模型的构建与训练
 - **模型结果**
-  - 
+  ![screenShot.png](https://i.loli.net/2019/11/27/bJuh1B2NQWpw58q.png)
   
