@@ -13,16 +13,16 @@ else {
         foreach ($f in Get-ChildItem $SOURCE_PCAP_DIR) {
             # For Windows
             <#
-            0_Tool\SplitCap_2-1\SplitCap -p 50000 -b 50000 -r $f.FullName -s flow -o 2_Session\AllLayers\$($f.BaseName)-ALL
+            0_Tool\SplitCap_2-1\SplitCap -p 500 -b 50000 -r $f.FullName -s flow -o 2_Session\AllLayers\$($f.BaseName)-ALL
             Get-ChildItem 2_Session\AllLayers\$($f.BaseName)-ALL | ?{$_.Length -eq 0} | Remove-Item
-            0_Tool\SplitCap_2-1\SplitCap -p 50000 -b 50000 -r $f.FullName -s flow -o 2_Session\L7\$($f.BaseName)-L7 -y L7
+            0_Tool\SplitCap_2-1\SplitCap -p 500 -b 50000 -r $f.FullName -s flow -o 2_Session\L7\$($f.BaseName)-L7 -y L7
             Get-ChildItem 2_Session\L7\$($f.BaseName)-L7 | ?{$_.Length -eq 0} | Remove-Item
             #>
 
             # For Linux
-            mono ./0_Tool/SplitCap_2-1/SplitCap.exe -p 50000 -b 50000 -r $f -s flow -o ./2_Session/AllLayers/$($f.BaseName)-ALL
+            mono ./0_Tool/SplitCap.exe -p 500 -b 50000 -r $f -s flow -o ./2_Session/AllLayers/$($f.BaseName)-ALL
             Get-ChildItem ./2_Session/AllLayers/$($f.BaseName)-ALL | ?{$_.Length -eq 0} | Remove-Item
-            mono ./0_Tool/SplitCap_2-1/SplitCap.exe -p 50000 -b 50000 -r $f -s flow -o ./2_Session/L7/$($f.BaseName)-L7 -y L7
+            mono ./0_Tool/SplitCap.exe -p 500 -b 50000 -r $f -s flow -o ./2_Session/L7/$($f.BaseName)-L7 -y L7
             Get-ChildItem ./2_Session/L7/$($f.BaseName)-L7 | ?{$_.Length -eq 0} | Remove-Item
         }
 
@@ -43,16 +43,16 @@ else {
         foreach ($f in Get-ChildItem $SOURCE_PCAP_DIR) {
             # For Windows
             <#
-            0_Tool\SplitCap_2-1\SplitCap -p 50000 -b 50000 -r $f.FullName -o 2_Session\AllLayers\$($f.BaseName)-ALL
+            0_Tool\SplitCap_2-1\SplitCap -p 500 -b 50000 -r $f.FullName -o 2_Session\AllLayers\$($f.BaseName)-ALL
             Get-ChildItem 2_Session\AllLayers\$($f.BaseName)-ALL | ?{$_.Length -eq 0} | Remove-Item
-            0_Tool\SplitCap_2-1\SplitCap -p 50000 -b 50000 -r $f.FullName -o 2_Session\L7\$($f.BaseName)-L7 -y L7
+            0_Tool\SplitCap_2-1\SplitCap -p 500 -b 50000 -r $f.FullName -o 2_Session\L7\$($f.BaseName)-L7 -y L7
             Get-ChildItem 2_Session\L7\$($f.BaseName)-L7 | ?{$_.Length -eq 0} | Remove-Item
             #>
 
             # For Linux
-            mono ./0_Tool/SplitCap_2-1/SplitCap.exe -p 50000 -b 50000 -r $f -o ./2_Session/AllLayers/$($f.BaseName)-ALL
+            mono ./0_Tool/SplitCap.exe -p 500 -b 50000 -r $f -o ./2_Session/AllLayers/$($f.BaseName)-ALL
             Get-ChildItem ./2_Session/AllLayers/$($f.BaseName)-ALL | ?{$_.Length -eq 0} | Remove-Item
-            mono ./0_Tool/SplitCap_2-1/SplitCap.exe -p 50000 -b 50000 -r $f -o ./2_Session/L7/$($f.BaseName)-L7 -y L7
+            mono ./0_Tool/SplitCap.exe -p 500 -b 50000 -r $f -o ./2_Session/L7/$($f.BaseName)-L7 -y L7
             Get-ChildItem ./2_Session/L7/$($f.BaseName)-L7 | ?{$_.Length -eq 0} | Remove-Item
         }
 
